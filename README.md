@@ -4,7 +4,7 @@ A GDPR-compliant cookie consent solution for Laravel applications with fully cus
 1. Install the package via Composer:
 
 ```bash
-composer require w01ki3/laravel-cookie-consent
+composer require w01ki3/cookie-consent
 ```
 
 2. Publish the package resources by running: (Normal publish)
@@ -15,13 +15,13 @@ php artisan vendor:publish --provider="w01ki3\CookieConsent\CookieConsentService
 
 Include these components in your Blade templates:
 
-1. Add styles in the `<head>` section:
+3. Add styles in the `<head>` section:
 
 ```php
 {!! CookieConsent::styles() !!}
 ```
 
-2. Add scripts before closing `</body>`:
+4. Add scripts before closing `</body>`:
 
 ```php
 {!! CookieConsent::scripts() !!}
