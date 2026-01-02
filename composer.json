@@ -1,0 +1,30 @@
+{
+    "name": "w01ki3/cookie-consent",
+    "type": "library",
+    "description": "Tamamen özelleştirilebilir çerez banner'ları, ayrıntılı onay kontrolü ve kurumsal düzeyde uyumluluk özelliklerine sahip, Laravel uygulamaları için GDPR uyumlu bir çerez onay çözümü.",
+    "keywords": ["laravel", "cookie", "consent", "gdpr", "compliance", "banner", "privacy"],
+    "homepage": "https://github.com/w01ki3/cookie-consent",
+    "license": "MIT",
+    "authors": [{
+        "name": "Volkan Karaoğlu",
+        "email": "w01ki3@gmail.com"
+    }],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "w01ki3\\CookieConsent\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "w01ki3\\CookieConsent\\CookieConsentServiceProvider"
+            ],
+            "aliases": {
+                "CookieConsent": "w01ki3\\CookieConsent\\Facades\\CookieConsent"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
