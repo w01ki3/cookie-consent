@@ -40,10 +40,25 @@ class CookieConsentServiceProvider extends ServiceProvider
     private function registerPublishing(): void
     {
         // Normal publish
-        $this->publishes([
+        $langSource = __DIR__ . '/../resources/lang';
+
+        $publish = [
             __DIR__ . '/config/cookie-consent.php' => config_path('cookie-consent.php'),
-            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/cookie-consent'),
-        ], 'cookie-consent');
+            $langSource => resource_path('lang/vendor/cookie-consent'),
+        ];
+
+        // Also publish individual locale files directly to resources/lang/{locale}/cookie-consent.php
+        if (is_dir($langSource)) {
+            foreach (glob($langSource . '/*', GLOB_ONLYDIR) as $localeDir) {
+                $locale = basename($localeDir);
+                $file = $localeDir . '/cookie-consent.php';
+                if (file_exists($file)) {
+                    $publish[$file] = resource_path("lang/{$locale}/cookie-consent.php");
+                }
+            }
+        }
+
+        $this->publishes($publish, 'cookie-consent');
     }
 
     private function registerResources(): void
