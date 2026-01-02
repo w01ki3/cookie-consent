@@ -39,7 +39,16 @@ class CookieConsentServiceProvider extends ServiceProvider
      */
     private function registerPublishing(): void
     {
-        // Normal publish
+        $this->publishes($this->getPublishMappings(), 'cookie-consent');
+    }
+
+    /**
+     * Return the publish mappings used for vendor:publish so it can be tested.
+     *
+     * @return array
+     */
+    protected function getPublishMappings(): array
+    {
         $langSource = __DIR__ . '/../resources/lang';
 
         $publish = [
@@ -58,7 +67,15 @@ class CookieConsentServiceProvider extends ServiceProvider
             }
         }
 
-        $this->publishes($publish, 'cookie-consent');
+        // Add explicit mappings for common locales so publishing works reliably
+        if (file_exists($langSource . '/en/cookie-consent.php')) {
+            $publish[$langSource . '/en/cookie-consent.php'] = resource_path('lang/en/cookie-consent.php');
+        }
+        if (file_exists($langSource . '/tr/cookie-consent.php')) {
+            $publish[$langSource . '/tr/cookie-consent.php'] = resource_path('lang/tr/cookie-consent.php');
+        }
+
+        return $publish;
     }
 
     private function registerResources(): void

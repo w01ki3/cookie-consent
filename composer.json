@@ -9,7 +9,14 @@
         "name": "Volkan Karaoğlu",
         "email": "w01ki3@gmail.com"
     }],
-    "require": {},
+    "require": {
+        "php": ">=8.0",
+        "illuminate/support": "^9.0|^10.0",
+        "illuminate/session": "^9.0|^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
     "autoload": {
         "psr-4": {
             "w01ki3\\CookieConsent\\": "src/"
