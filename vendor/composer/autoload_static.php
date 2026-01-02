@@ -7,9 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInit097b259ba67d03f0111b724291f0acdf
 {
     public static $prefixLengthsPsr4 = array (
-        'D' => 
+        'w' => 
         array (
-            'w01ki3\\CookieConsent\\' => 31,
+            'w01ki3\\CookieConsent\\' => 21,
         ),
     );
 
