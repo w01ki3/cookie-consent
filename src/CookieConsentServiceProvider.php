@@ -53,7 +53,6 @@ class CookieConsentServiceProvider extends ServiceProvider
 
         $publish = [
             __DIR__ . '/config/cookie-consent.php' => config_path('cookie-consent.php'),
-            $langSource => resource_path('lang/vendor/cookie-consent'),
         ];
 
         // Also publish individual locale files directly to resources/lang/{locale}/cookie-consent.php
@@ -65,14 +64,6 @@ class CookieConsentServiceProvider extends ServiceProvider
                     $publish[$file] = resource_path("lang/{$locale}/cookie-consent.php");
                 }
             }
-        }
-
-        // Add explicit mappings for common locales so publishing works reliably
-        if (file_exists($langSource . '/en/cookie-consent.php')) {
-            $publish[$langSource . '/en/cookie-consent.php'] = resource_path('lang/en/cookie-consent.php');
-        }
-        if (file_exists($langSource . '/tr/cookie-consent.php')) {
-            $publish[$langSource . '/tr/cookie-consent.php'] = resource_path('lang/tr/cookie-consent.php');
         }
 
         return $publish;
