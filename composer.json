@@ -1,8 +1,8 @@
 {
     "name": "w01ki3/cookie-consent",
     "type": "library",
-    "description": "Tamamen özelleştirilebilir çerez banner'ları, ayrıntılı onay kontrolü ve kurumsal düzeyde uyumluluk özelliklerine sahip, Laravel uygulamaları için GDPR uyumlu bir çerez onay çözümü.",
-    "keywords": ["laravel", "cookie", "consent", "gdpr", "compliance", "banner", "privacy"],
+    "description": "Laravel uygulamaları için KVKK(TR) ve GDPR(AB) uyumlu çerez onay paketi.",
+    "keywords": ["laravel", "cookie", "consent", "kvkk", "gdpr", "çerez", "onay", "bildirim"],
     "homepage": "https://github.com/w01ki3/cookie-consent",
     "license": "MIT",
     "authors": [{
