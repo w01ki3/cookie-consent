@@ -4,7 +4,6 @@ namespace w01ki3\CookieConsent;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\File;
-use function PHPUnit\Framework\isNull;
 
 /**
  * Class AssetsServiceProvider
