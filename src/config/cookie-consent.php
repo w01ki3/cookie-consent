@@ -5,10 +5,6 @@
  *
  * This file contains all the configuration options for the cookie consent system.
  * It allows customization of the cookie banner appearance, behavior, and compliance settings.
- *
- * @package Config
- * @author Muhammad Rabiul
- * @license MIT
  */
 
 return [
