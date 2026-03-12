@@ -2,7 +2,16 @@
     "name": "w01ki3/cookie-consent",
     "type": "library",
     "description": "Laravel uygulamaları için KVKK(TR) ve GDPR(AB) uyumlu çerez onay paketi.",
-    "keywords": ["laravel", "cookie", "consent", "kvkk", "gdpr", "çerez", "onay", "bildirim"],
+    "keywords": [
+        "laravel",
+        "cookie",
+        "consent",
+        "kvkk",
+        "gdpr",
+        "çerez",
+        "onay",
+        "bildirim"
+    ],
     "homepage": "https://github.com/w01ki3/cookie-consent",
     "license": "MIT",
     "authors": [{
@@ -11,11 +20,11 @@
     }],
     "require": {
         "php": ">=8.0",
-        "illuminate/support": "^9.0|^10.0",
-        "illuminate/session": "^9.0|^10.0"
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/session": "^9.0|^10.0|^11.0|^12.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5|^10.0|^11.0"
     },
     "autoload": {
         "psr-4": {
